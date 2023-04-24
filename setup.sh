@@ -17,7 +17,7 @@ else
   echo "node_modules" >> .gitignore
 fi
 
-read -sp "Enter your PostgreSQL password for username `postgres`: " postgres_password
+read -sp "Enter your PostgreSQL password for username postgres: " postgres_password
 
 # Check if default block already has the fields
 if grep -q 'username: postgres' config/database.yml && grep -q 'password: 123456' config/database.yml && grep -q 'host: localhost' config/database.yml && grep -q 'port: 5432' config/database.yml; then
