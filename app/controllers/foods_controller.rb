@@ -1,9 +1,9 @@
 class FoodsController < ApplicationController
   # load_and_authorize_resource
   # before_action :authenticate_user!, only: [:create]
-
+  before_action :set_food, only: %i[show edit update destroy]
   def index
-    # @food = Food.includes(:foods).find(params[:user_id])
+    @foods = Food.all
   end
 
   def new

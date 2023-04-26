@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+main,
+header,
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 720px;
+}
+
+.recipe-card {
+  display: flex;
+  align-items: flex-start;
+
+  .left {
+    width: 33%;
+  }
+
+  .right {
+    width: 67%;
+    padding-left: 20px;
+  }
+}

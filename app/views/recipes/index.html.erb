@@ -1,0 +1,20 @@
+<main>
+<div class="recipes container">
+    <h1>Recipes</h1>
+        <% @recipes.each do |recipe| %>
+        <div class="recipe-card">
+            <div class="left">
+                <h3><%= recipe.name %></h3>
+                <div class="delete-button">
+                    <button>Delete</button>
+                </div>
+            </div>
+            <div class="right">
+                <h4>Recipe Description</h4>
+                <p><%= recipe.description %></p>
+            </div>
+        </div>
+        <% end %>
+    
+    </div>
+</main>

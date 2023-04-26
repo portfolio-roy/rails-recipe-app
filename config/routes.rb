@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-root 'recipes#index'
-  resources :foods, only: [:index, :create, :destroy]
+root 'foods#index'
+resources :recipes
+resources :foods, only: [:index, :create, :destroy]
 end
