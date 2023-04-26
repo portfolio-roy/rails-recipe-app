@@ -33,28 +33,24 @@ footer {
   display: flex;
   justify-content: space-between;
 }
-
 .recipe-details {
   width: 80%;
 }
-
 .recipe-footer {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-
 .switch {
   position: relative;
   display: inline-block;
   width: 50px;
   height: 25px;
-}
-
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
 }
 
 .slider {
@@ -67,18 +63,23 @@ footer {
   background-color: #ccc;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-}
-
-.slider::before {
-  position: absolute;
-  content: "";
-  height: 22px;
-  width: 22px;
-  left: 1px;
-  bottom: 1.5px;
-  background-color: white;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  &::before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 1px;
+    bottom: 1.5px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  &.round {
+    border-radius: 34px;
+    &::before {
+      border-radius: 50%;
+    }
+  }
 }
 
 input:checked + .slider {
@@ -93,14 +94,6 @@ input:checked + .slider::before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
-}
-
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round::before {
-  border-radius: 50%;
 }
 
 .switch-btn {
