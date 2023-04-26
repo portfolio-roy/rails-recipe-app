@@ -1,5 +1,30 @@
 <main>
 <div class="show-recipe container">
-    <%= render @recipe %>
+<p style="color: green"><%= notice %></p>
+
+<h1> <%= @recipe.name %></h1>
+
+<div class="recipe-body">
+<%= render @recipe %>
+
+
+
+<%= form_for @recipe, method: :post do |f| %>
+<div class="switch-btn">
+  <p>Public : </p>
+  <label class="switch">
+  <div><%= f.submit "" %></div>
+    <%= f.check_box :public, { checked: @recipe.public } %>
+    <span class="slider round"></span>
+  </label>
+</div>
+
+<% end %>
+</div>
+<footer class="recipe-footer">
+<button>Generate shopping list</button>
+<button>Add ingredient</button>
+</footer>
+
 </div>
 </main>

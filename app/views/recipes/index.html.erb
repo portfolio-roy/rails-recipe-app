@@ -4,9 +4,11 @@
         <% @recipes.each do |recipe| %>
         <div class="recipe-card">
             <div class="left">
-                <h3><%= recipe.name %></h3>
+                <%= link_to recipe_path(recipe) do %>
+        <h3><%= recipe.name %></h3>
+      <% end %>
                 <div class="delete-button">
-                    <button>Delete</button>
+                    <%= button_to "Remove", recipe, method: :delete, class: 'remove-recipe-link' %>
                 </div>
             </div>
             <div class="right">
