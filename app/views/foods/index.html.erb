@@ -1,7 +1,9 @@
+<main>
+<div class="food-index container">
 <h1>List of foods for current user</h1>
 
 <div class="add-food-button">
-    <button type="button" class="new-food-button"><%= link_to "add food" %></button>
+    <button type="button" class="new-food-button"><%= link_to "add food", new_food_path() %></button>
 </div>
 
 <table class="foods_table">
@@ -15,14 +17,8 @@
   </tr>
 </thead>
 <% @foods.each do |food| %>
-  <tr id="food-id-<%= food.id %>">
-    <td><%= food.name %></td>
-    <td><%= food.measurement_unit %></td>
-    <td><%= food.price %></td>
-    <td><%= food.quantity%></td>
-    <td>
-      <%= link_to "delete", food_path(food), method: :delete, remote: true %>
-    </td>
-  </tr>
+  <%= render food %>
 <% end %>
 </table>
+</div>
+</main>
