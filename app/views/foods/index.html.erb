@@ -17,15 +17,7 @@
   </tr>
 </thead>
 <% @foods.each do |food| %>
-  <tr id="food-id-<%= food.id %>">
-    <td><%= food.name %></td>
-    <td><%= food.measurement_unit %></td>
-    <td>$ <%= food.price %></td>
-    <td><%= food.quantity%> <%= food.measurement_unit %>s</td>
-    <td>
-      <%= button_to "delete", {:controller => :foods, :action => 'destroy', :id => food.id}, method: :delete %>
-    </td>
-  </tr>
+  <%= render food %>
 <% end %>
 </table>
 </div>
