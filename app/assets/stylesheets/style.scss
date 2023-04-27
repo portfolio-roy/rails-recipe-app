@@ -14,11 +14,13 @@ footer {
   width: 100%;
   max-width: 720px;
 }
+
 .food-form-container {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
 .recipe-card {
   display: flex;
   align-items: flex-start;
@@ -121,10 +123,12 @@ th {
 td {
   border: 1px solid gray;
 }
+
 tr {
   &:nth-child(odd) {
     background: transparent;
   }
+
   &:nth-child(even) {
     background: rgba(226, 225, 225, 0.506);
   }
