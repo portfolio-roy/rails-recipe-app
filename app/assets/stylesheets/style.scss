@@ -49,10 +49,11 @@ footer {
   display: inline-block;
   width: 50px;
   height: 25px;
-  input {
-    opacity: 0;
-    width: 0;
-    height: 0;
+
+input {
+  opacity: 0;
+  width: 0;
+  height: 0;
   }
 }
 
@@ -66,6 +67,7 @@ footer {
   background-color: #ccc;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  
   &::before {
     position: absolute;
     content: "";
@@ -77,8 +79,10 @@ footer {
     -webkit-transition: 0.4s;
     transition: 0.4s;
   }
+
   &.round {
     border-radius: 34px;
+    
     &::before {
       border-radius: 50%;
     }
