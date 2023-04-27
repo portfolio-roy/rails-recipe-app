@@ -1,30 +1,30 @@
 class FoodsController < ApplicationController
   # load_and_authorize_resource
   # before_action :authenticate_user!, only: [:create]
-  before_action :set_food, only: %i[show edit update destroy]
+  #before_action :set_food, only: %i[show edit update destroy]
   def index
     @foods = Food.all
   end
 
   def new
-    @user = current_user
     @food = Food.new
   end
 
   def create
-    @user = current_user
-    @food = Food.new(params[:food])
-    @food.user_id = @user.id
+    @food = Food.new(
+      name: params[:food][:name],
+      measurement_unit:params[:food][:measurement_unit],
+      quantity: params[:food][:quantity], 
+      price: params[:food][:price],
+      user_id: 1)
     @food.save
-    redirect_to user_foods_path(@user)
+    redirect_to foods_path()
   end
-
-  private
 
   def destroy
     @food = Food.find(params[:id])
-    authorize! :destroy, @food
+    #authorize! :destroy, @food
     @food.destroy
-    redirect_to user_foods_path(current_user), notice: 'Food was successfully deleted.'
+    redirect_to foods_path(), notice: 'Food was successfully deleted.'
   end
 end

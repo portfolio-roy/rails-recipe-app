@@ -1,0 +1,12 @@
+<section class='new-food-container'>
+  <h2>Add a food</h2>
+  <%= form_with model: @food, url: foods_path() do |form| %>
+    <div class='food-form-container'>
+      <%= form.text_field :name, required: true, autofocus: true, placeholder: 'food name', class: "form-input" %>
+      <%= form.text_field :measurement_unit, required: true, autofocus: true, placeholder: 'measurement unit', class: "form-input" %>
+      <%= form.number_field :price, required: true, autofocus: true, class: "form-input" %>
+      <%= form.number_field :quantity, required: true, autofocus: true, class: "form-input" %>
+      <%= form.submit "Add food", class: "form-button" %>
+    </div>
+  <% end %>
+</section>

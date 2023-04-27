@@ -1,7 +1,7 @@
 <h1>List of foods for current user</h1>
 
 <div class="add-food-button">
-    <button type="button" class="new-food-button"><%= link_to "add food" %></button>
+    <button type="button" class="new-food-button"><%= link_to "add food", new_food_path() %></button>
 </div>
 
 <table class="foods_table">
@@ -18,10 +18,10 @@
   <tr id="food-id-<%= food.id %>">
     <td><%= food.name %></td>
     <td><%= food.measurement_unit %></td>
-    <td><%= food.price %></td>
-    <td><%= food.quantity%></td>
+    <td>$ <%= food.price %></td>
+    <td><%= food.quantity%> <%= food.measurement_unit %>s</td>
     <td>
-      <%= link_to "delete", food_path(food), method: :delete, remote: true %>
+      <%= button_to "delete", {:controller => :foods, :action => 'destroy', :id => food.id}, method: :delete %>
     </td>
   </tr>
 <% end %>
