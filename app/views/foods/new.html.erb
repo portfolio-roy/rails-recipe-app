@@ -4,8 +4,14 @@
     <div class='food-form-container'>
       <%= form.text_field :name, required: true, autofocus: true, placeholder: 'food name', class: "form-input" %>
       <%= form.text_field :measurement_unit, required: true, autofocus: true, placeholder: 'measurement unit', class: "form-input" %>
-      <%= form.number_field :price, required: true, autofocus: true, class: "form-input" %>
+      <div class="input-with-label">
+        <label for="price">Price</label>
+      <%= form.number_field :price, required: true, autofocus: true, class: "form-input"%>
+      </div>
+      <div class="input-with-label">
+        <label for="quantity">Quantity</label>
       <%= form.number_field :quantity, required: true, autofocus: true, class: "form-input" %>
+      </div>
       <%= form.submit "Add food", class: "form-button" %>
     </div>
   <% end %>
