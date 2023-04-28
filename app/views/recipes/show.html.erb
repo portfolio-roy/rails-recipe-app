@@ -23,7 +23,9 @@
 </div>
 <footer class="recipe-footer">
 <div class="footer-buttons">
+<a href= <%= "/recipes/#{@recipe.id}/shoppings/show" %>>
 <button>Generate shopping list</button>
+</a>
 
 <a href= <%= "/recipes/#{@recipe.id}/recipe_foods/new" %>>
 <button>Add ingredient</button>
