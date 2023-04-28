@@ -45,9 +45,17 @@ footer {
 }
 
 .recipe-footer {
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  .footer-buttons {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .switch {
