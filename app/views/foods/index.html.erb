@@ -1,24 +1,23 @@
 <main>
-<div class="food-index container">
-<h1>List of foods for current user</h1>
-
-<div class="add-food-button">
-    <button type="button" class="new-food-button"><%= link_to "add food", new_food_path() %></button>
-</div>
-
-<table class="foods_table">
-<thead>
+<div class="food-index container d-flex flex-column">
+<div class="my-2"></div>
+<h1>List of foods for <%= current_user.name %></h1>
+<div class="my-2"></div>
+<table class="table">
+<thead class="table-dark">
   <tr>
-    <th class="column_title">Food</th>
-    <th class="column_title">Measurement unit</th>
-    <th class="column_title">Unit price</th>
-    <th class="column_title">Quantity</th>
-    <th class="column_title">Actions</th>
+    <th scope="col">Food</th>
+    <th scope="col">Measurement unit</th>
+    <th scope="col">Unit price</th>
+    <th scope="col">Quantity</th>
+    <th scope="col">Actions</th>
   </tr>
 </thead>
 <% @foods.each do |food| %>
   <%= render food %>
 <% end %>
 </table>
+<div class="my-2"></div>
+<%= link_to "Add food", new_food_path, class: "btn btn-secondary align-self-center" %>
 </div>
 </main>
