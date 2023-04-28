@@ -9,8 +9,8 @@
 
 
 
-<%= form_for @recipe, method: :post do |f| %>
-<div class="switch-btn">
+<%= form_for @recipe, method: :patch do |f| %>
+<div class="swith-btn">
   <p>Public : </p>
   <label class="switch">
   <div><%= f.submit "" %></div>
@@ -22,8 +22,37 @@
 <% end %>
 </div>
 <footer class="recipe-footer">
+<div class="footer-buttons">
 <button>Generate shopping list</button>
+
+<a href= <%= "/recipes/#{@recipe.id}/recipe_foods/new" %>>
 <button>Add ingredient</button>
+</a>
+</div>
+<table id="foods">
+  <thead>
+    <tr>
+      <th>Food</th>
+      <th>Quantity</th>
+      <th>Value</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+    <tbody>
+    <% @recipe.recipe_food.each do |recipe_food| %>
+      <tr>
+          <td><%= recipe_food.food.name %></td>
+          <td><%= recipe_food.quantity %> <%= recipe_food.food.measurement_unit %></td>
+          <td>$ <%= recipe_food.value %></td>
+          <td class="recipe-food-buttons">
+           <%= link_to "Modify", edit_recipe_recipe_food_path(recipe_id: @recipe.id, id: recipe_food.id) %>
+    <%= button_to "Remove", recipe_recipe_food_path(recipe_id: @recipe.id, id: recipe_food.id), method: :delete %>
+          </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
 </footer>
 
 </div>
