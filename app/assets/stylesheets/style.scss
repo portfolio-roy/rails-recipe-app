@@ -301,8 +301,7 @@ input:checked + .slider::before {
   background-position: center;
   background-image: url(chef);
   background-attachment: fixed;
-  background-size:contain;
-  background-position: center;
+  background-size: contain;
   background-repeat: no-repeat;
   width: 100vw;
   min-height: 100vh;
