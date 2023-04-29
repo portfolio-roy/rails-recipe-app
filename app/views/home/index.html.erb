@@ -1,4 +1,4 @@
-<section id="welcome" class="py-5 d-flex flex-column">
+<section id="welcome" class="py-5 d-flex flex-column home-upper">
     <div class="container d-flex align-items-center">
         <div class="col-md-6">
             <%= image_tag("recipe.png", height: 400) %>
@@ -13,9 +13,12 @@
     </div>
     
 </section>
-<section id="public-recipes" class="py-5 d-flex flex-column">
+
+ <section class="wood-border"></section>
+
+<section id="public-recipes" class="py-5 d-flex flex-column home-middle">
     <div class="container d-flex flex-column">
-        <h3>Public Recipes</h3>
+        <h3 class="align-self-center">Public Recipes</h3>
   <ul style="gap: 16px;" class="d-flex flex-column p-4 border border-3">
   <% @public_recipes.each do |recipe| %>
     <%= render "public_recipes/public_recipe", recipe: recipe %>

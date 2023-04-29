@@ -1,8 +1,8 @@
-<li class="d-flex justify-content-between border border-2 p-2">
+<li class="d-flex justify-content-between border border-2 p-2 border border-dark public-recipe-box">
           
         <div>
         <a href=<%= "recipes/#{recipe.id}" %>>  
-          <h3><%= recipe.name %></h3>
+          <h3 class="text-dark"><%= recipe.name %></h3>
           </a>
           <p>by: <%= recipe.user.name %></p>
         </div>

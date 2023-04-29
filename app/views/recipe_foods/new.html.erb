@@ -1,4 +1,4 @@
-<main>
+<main class="new-recipe-food"> 
 <div class="container new-inredients">
 <%= form_with(model: @recipe_food, url: "/recipes/#{@recipe.id}/recipe_foods/")  do |form| %>
   <% if @recipe_food.errors.any? %>

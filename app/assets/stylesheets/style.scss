@@ -1,8 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+html {
+  background-image: url(food_background);
+}
+
 * {
   box-sizing: border-box;
+  font-family: 'Caveat', cursive;
 }
 a {
   text-decoration: none;
+  color: darkblue;
 }
 // main,
 // header,
@@ -12,15 +20,77 @@ a {
 //   align-items: center;
 // }
 
+
+.home-upper {
+  background-image: url(kitchen_theme);
+  height: auto;
+  font-size: larger;
+  font-weight:800;
+  color: rgb(4, 75, 28);
+}
+
+.wood-border {
+  height: 20px;
+  background-image: url(wood-border);
+  background-size: cover;
+}
+
+.home-middle {
+  background-image: url(middle_bg.jpg);
+  background-attachment: scroll;
+  background-size: cover;
+  color: darkgreen;
+  font-size: larger;
+}
+
+.public-recipe-box {
+  background-color: beige;
+}
+
+.foods-area {
+  min-height: 100vh;
+  background-image: url(food_background);
+}
+
+.food-container {
+  font-size: larger;
+  font-weight: bold;
+  color:rgba(11, 133, 58, 0.8);
+
+  background-image: url(grey-wood);
+}
+
+.new-food-area {
+  min-height: 100vh;
+  background-image: url(food_background);
+}
+
+.recipes-area {
+  min-height: 100vh;
+  background-image: url(plants);
+  background-repeat: repeat;
+  background-size: contain;
+}
+
 .food-form-container {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
+.form-input {
+  background-color: rgb(209, 239, 229);
+}
+
+.form-button {
+  background-color: rgb(233, 216, 119);
+}
+
 .recipe-card {
   display: flex;
   align-items: flex-start;
+  background-color: rgb(186, 235, 108);
+  border-radius: 10%;
 
   .left {
     width: 33%;
@@ -150,3 +220,97 @@ input:checked + .slider::before {
 .recipe-list {
   gap: 20px;
 }
+
+.recipe-area {
+  background-position: center;
+    background-image: url(food-sorrounding);
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;
+    font-size: x-large;
+    font-weight: bolder;
+    color:black;
+}
+
+.recipe-btn {
+  background-color: rgb(186, 235, 108);
+}
+
+.public-recipes {
+  background-position: center;
+    background-image: url(plants);
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;
+    font-size: x-large;
+    font-weight: bolder;
+    color:black;
+}
+
+.new-recipe {
+  background-position: center;
+    background-image: url(plants);
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;
+    font-size: x-large;
+    font-weight: bolder;
+    color:black;
+}
+
+.shopping-list {
+  background-position: center;
+    background-image: url(food-sorrounding);
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100vw;
+    min-height: 100vh;
+    font-size: x-large;
+    font-weight: bolder;
+    color:black;
+}
+
+.new-recipe-food {
+  background-position: center;
+    background-image: url(food_background);
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100vw;
+    min-height: 100vh;
+    font-size: x-large;
+    font-weight: bolder;
+    color:black;
+}
+
+.log-in-page {
+  background-position: center;
+    background-image: url(kitchen);
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100vw;
+    min-height: 100vh;
+    font-size: x-large;
+    font-weight: bolder;
+    color:black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sign-up-page {
+  background-position: center;
+    background-image: url(chef);
+    background-attachment: fixed;
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    min-height: 100vh;
+    font-size: x-large;
+    font-weight: bolder;
+    color:black;
+    display: flex;
+    flex-direction: column;
+    align-items:end;
+}
+
