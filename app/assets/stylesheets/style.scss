@@ -129,6 +129,7 @@ input:checked + .slider::before {
 
 #shopping-list {
   width: 80%;
+
   thead,
   td {
     border: 1px solid black;
@@ -137,6 +138,7 @@ input:checked + .slider::before {
 
 .auth {
   min-height: 100vh;
+
   form {
     display: flex;
     flex-direction: column;
