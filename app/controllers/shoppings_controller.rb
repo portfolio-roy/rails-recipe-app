@@ -1,6 +1,7 @@
 class ShoppingsController < ApplicationController
-  def show
-    @recipe = Recipe.includes(:recipe_food).find(params[:recipe_id])
-    @ingredients = @recipe.recipe_food.where(recipe: @recipe)
+  def index
+    @shop_list = RecipeFood.shopping_list(current_user)
+
+    @total_price = @shop_list.reduce(0) { |sum, el| sum + el.price }
   end
 end
