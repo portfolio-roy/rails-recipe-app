@@ -1,0 +1,26 @@
+<section id="welcome" class="py-5 d-flex flex-column">
+    <div class="container d-flex align-items-center">
+        <div class="col-md-6">
+            <%= image_tag("recipe.png", height: 400) %>
+        </div>
+        <div class="col-md-6">
+            <h1>Welcome to the Recipe App</h1>
+            <p>Here you can create your own recipes and share them with the world.</p>
+            <p>Click on the button below to get started.</p>
+            <a href="/recipes" class="btn btn-primary">Get Started</a>
+        </div>
+        
+    </div>
+    
+</section>
+<section id="public-recipes" class="py-5 d-flex flex-column">
+    <div class="container d-flex flex-column">
+        <h3>Public Recipes</h3>
+  <ul style="gap: 16px;" class="d-flex flex-column p-4 border border-3">
+  <% @public_recipes.each do |recipe| %>
+    <%= render "public_recipes/public_recipe", recipe: recipe %>
+  <% end %>
+</ul>
+    </div>
+    
+</section>

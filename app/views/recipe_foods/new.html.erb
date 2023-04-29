@@ -1,5 +1,6 @@
 <main>
 <div class="container new-inredients">
+<h1>Add ingredient</h1>
 <%= form_with(model: @recipe_food, url: "/recipes/#{@recipe.id}/recipe_foods/")  do |form| %>
   <% if @recipe_food.errors.any? %>
     <div style="color: red">
