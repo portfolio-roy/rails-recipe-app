@@ -8,6 +8,7 @@ html {
   box-sizing: border-box;
   font-family: 'Caveat', cursive;
 }
+
 a {
   text-decoration: none;
   color: darkblue;
@@ -20,12 +21,11 @@ a {
 //   align-items: center;
 // }
 
-
 .home-upper {
   background-image: url(kitchen_theme);
   height: auto;
   font-size: larger;
-  font-weight:800;
+  font-weight: 800;
   color: rgb(4, 75, 28);
 }
 
@@ -55,8 +55,7 @@ a {
 .food-container {
   font-size: larger;
   font-weight: bold;
-  color:rgba(11, 133, 58, 0.8);
-
+  color: rgba(11, 133, 58, 0.8);
   background-image: url(grey-wood);
 }
 
@@ -217,19 +216,20 @@ input:checked + .slider::before {
   min-height: 50vh;
   background-color: lightgray;
 }
+
 .recipe-list {
   gap: 20px;
 }
 
 .recipe-area {
   background-position: center;
-    background-image: url(food-sorrounding);
-    background-attachment: fixed;
-    background-size: cover;
-    min-height: 100vh;
-    font-size: x-large;
-    font-weight: bolder;
-    color:black;
+  background-image: url(food-sorrounding);
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+  font-size: x-large;
+  font-weight: bolder;
+  color: black;
 }
 
 .recipe-btn {
@@ -238,79 +238,78 @@ input:checked + .slider::before {
 
 .public-recipes {
   background-position: center;
-    background-image: url(plants);
-    background-attachment: fixed;
-    background-size: cover;
-    min-height: 100vh;
-    font-size: x-large;
-    font-weight: bolder;
-    color:black;
+  background-image: url(plants);
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+  font-size: x-large;
+  font-weight: bolder;
+  color: black;
 }
 
 .new-recipe {
   background-position: center;
-    background-image: url(plants);
-    background-attachment: fixed;
-    background-size: cover;
-    min-height: 100vh;
-    font-size: x-large;
-    font-weight: bolder;
-    color:black;
+  background-image: url(plants);
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+  font-size: x-large;
+  font-weight: bolder;
+  color: black;
 }
 
 .shopping-list {
   background-position: center;
-    background-image: url(food-sorrounding);
-    background-attachment: fixed;
-    background-size: cover;
-    width: 100vw;
-    min-height: 100vh;
-    font-size: x-large;
-    font-weight: bolder;
-    color:black;
+  background-image: url(food-sorrounding);
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100vw;
+  min-height: 100vh;
+  font-size: x-large;
+  font-weight: bolder;
+  color: black;
 }
 
 .new-recipe-food {
   background-position: center;
-    background-image: url(food_background);
-    background-attachment: fixed;
-    background-size: cover;
-    width: 100vw;
-    min-height: 100vh;
-    font-size: x-large;
-    font-weight: bolder;
-    color:black;
+  background-image: url(food_background);
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100vw;
+  min-height: 100vh;
+  font-size: x-large;
+  font-weight: bolder;
+  color: black;
 }
 
 .log-in-page {
   background-position: center;
-    background-image: url(kitchen);
-    background-attachment: fixed;
-    background-size: cover;
-    width: 100vw;
-    min-height: 100vh;
-    font-size: x-large;
-    font-weight: bolder;
-    color:black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  background-image: url(kitchen);
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100vw;
+  min-height: 100vh;
+  font-size: x-large;
+  font-weight: bolder;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .sign-up-page {
   background-position: center;
-    background-image: url(chef);
-    background-attachment: fixed;
-    background-size:contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100vw;
-    min-height: 100vh;
-    font-size: x-large;
-    font-weight: bolder;
-    color:black;
-    display: flex;
-    flex-direction: column;
-    align-items:end;
+  background-image: url(chef);
+  background-attachment: fixed;
+  background-size:contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  min-height: 100vh;
+  font-size: x-large;
+  font-weight: bolder;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
 }
-
