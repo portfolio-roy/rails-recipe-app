@@ -5,8 +5,7 @@ class Ability
 
     user ||= User.new
 
-    can :read, Recipe, user_id: user.id
-    can :read, Recipe, public: true
+    can :read, :all
     can :manage, Recipe, user_id: user.id
   end
 end

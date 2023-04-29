@@ -2,9 +2,9 @@
 <div class="container">
 
 
-<div class="max-width flex-center column shopping">
+<div class="col-md-12 d-flex flex-column align-items-center">
   <h2>Shopping List</h2>
-  <div class="row max-width detail">
+  <div class="d-flex justify-content-around col-md-12">
     <p>
       Amount of food items to buy: <%= @shop_list.length %>
     </p>
@@ -13,12 +13,12 @@
     </p>
   </div>
 
-  <table class="table">
-    <tr>
+  <table class="table border border-1" id="shopping-list">
+    <thead class="table-dark">
       <th>Food</th>
       <th>Quantity</th>
       <th>Price</th>
-    </tr>
+    </thead>
     <% @shop_list.each do |recipe_food| %>
       <tr>
         <td><%= recipe_food.name %></td>
