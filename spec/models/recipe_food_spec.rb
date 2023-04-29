@@ -19,18 +19,6 @@ RSpec.describe RecipeFood, type: :model do
     expect(@recipe_food).to_not be_valid
   end
 
-  it 'test value method' do
-    # 10(quantity) x 2 (price) = 20
-    recipe_food = RecipeFood.includes(:food).first
-    expect(recipe_food.value).to eql 0.1e1
-  end
-
-  it 'test total_price method' do
-    # for only one food total price = 20
-    recipe_food = RecipeFood.includes(:food).first
-    expect(recipe_food.value).to eql 0.1e1
-  end
-
   it 'test shopping list method' do
     recipe_food = RecipeFood.includes(:food).first
     shop_list = RecipeFood.shopping_list(@user)

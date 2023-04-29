@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+
 a {
   text-decoration: none;
 }
@@ -147,6 +148,7 @@ input:checked + .slider::before {
   min-height: 50vh;
   background-color: lightgray;
 }
+
 .recipe-list {
   gap: 20px;
 }
