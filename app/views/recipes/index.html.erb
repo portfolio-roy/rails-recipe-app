@@ -1,0 +1,24 @@
+<main>
+<div class="recipes container">
+    <h1 class="py-2">Recipes</h1>
+    <%= button_to "Add Recipe", new_recipe_path, method: :get, class:"btn btn-secondary" %>
+    <div class="recipe-list d-flex flex-column">
+        <% @recipes.each do |recipe| %>
+        <div class="recipe-card p-2 border border-2">
+            <div class="col-md-4 border-end border-2">
+                <%= link_to recipe_path(recipe) do %>
+        <h3><%= recipe.name %></h3>
+      <% end %>
+                
+                    <%= button_to "Remove", recipe, method: :delete, class: 'btn btn-danger' %>
+                
+            </div>
+            <div class="col-md-8 p-2">
+                <h4>Recipe Description</h4>
+                <p><%= recipe.description %></p>
+            </div>
+        </div>
+        <% end %>
+    </div>
+    </div>
+</main>

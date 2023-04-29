@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+// main,
+// header,
+// footer {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// }
+
+.food-form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.recipe-card {
+  display: flex;
+  align-items: flex-start;
+
+  .left {
+    width: 33%;
+  }
+
+  .right {
+    width: 67%;
+    padding-left: 20px;
+  }
+}
+
+.recipe-body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.recipe-details {
+  width: 80%;
+}
+
+.recipe-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  .footer-buttons {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  table {
+    width: 100%;
+  }
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+
+  &::before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 1px;
+    bottom: 1.5px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  &.round {
+    border-radius: 34px;
+
+    &::before {
+      border-radius: 50%;
+    }
+  }
+}
+
+input:checked + .slider {
+  background-color: green;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px green;
+}
+
+input:checked + .slider::before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.switch-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+// th {
+//   padding: 8px;
+//   background-color: lightgrey;
+// }
+
+// td {
+//   border: 1px solid gray;
+// }
+
+// tr {
+//   &:nth-child(odd) {
+//     background: transparent;
+//   }
+
+//   &:nth-child(even) {
+//     background: rgba(226, 225, 225, 0.506);
+//   }
+// }
+
+#welcome {
+  min-height: 50vh;
+  background-color: lightgray;
+}
+
+.recipe-list {
+  gap: 20px;
+}
