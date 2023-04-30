@@ -55,7 +55,6 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
@@ -69,7 +68,6 @@ To get a local copy up and running, follow these steps.
 In order to run this project you need:
 
 `gem install rails`
-
 
 ### Setup
 
@@ -99,7 +97,7 @@ To run tests, run the following command:
 
 OR
 
-`rubocop -a` 
+`rubocop -a`
 
 **it will automatically correct the errors**
 
@@ -113,13 +111,11 @@ OR
 
 - GitHub: [@juanmanuelbyc](https://github.com/juanmanuelbyc)
 
-
 👤 **Utsargo Roy**
 
 - GitHub: [@utsargo](https://github.com/utsargo
 - Twitter: [@royutsargo](https://twitter.com/royutsargo
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/utsargo-roy/)
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -161,6 +157,6 @@ If you like this project then please give a ⭐️ and also share your feedback 
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./MIT) licensed.
+This project is [MIT](./LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
